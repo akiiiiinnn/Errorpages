@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(to right, #A90000, #4F0101);
+      animation: gradientMove 10s linear infinite alternate;
+    }
+
+    .error-container {
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      max-width: 400px;
+    }
+
+    .error-code {
+      font-size: 120px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    .error-message {
+      font-size: 36px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #e74c3c;
+    }
+
+    .back-to-home {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #e74c3c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+      font-size: 18px;
+    }
+
+    .back-to-home:hover {
+      background-color: #4F0101;
+    }
+
+    .subtle-text {
+      font-size: 16px;
+      color: #eee;
+      margin-top: 20px;
+      max-width: 100%;
+      line-height: 1.5;
+    }
+
+
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px rgba(231, 76, 60, 0.8);
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff;
+      }
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+  </style>
+  <title>401 - Unauthorized</title>
+</head>
+<body>
+<div class="error-container">
+  <div class="error-code">401</div>
+  <div class="error-message">Unberechtigter Zugriff</div>
+  <p class="subtle-text">Es tut uns leid, aber Sie haben keine Berechtigung für den Zugriff auf diese Seite. Stellen Sie sicher, dass Sie die erforderlichen Anmeldeinformationen haben.</p>
+  <a href="/" class="back-to-home">Zurück zur Startseite</a>
+</div>
+</body>
+</html>
